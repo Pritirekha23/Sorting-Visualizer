@@ -23,7 +23,8 @@
 /* left side section start */
 .left-side{
     width: 20%;
-    background-color:#F08080;
+    background-color: teal;
+    /* background-color:#F08080; */
     color: #fff;
 }
 
@@ -56,12 +57,6 @@ margin-top: 20px;
 /* right side  section end*/
 
 
-
-
-
-
-
-
 /* for button */
 .button-container {
     display: flex;
@@ -70,7 +65,8 @@ margin-top: 20px;
   }
   
 button {
-    background-color:crimson;
+  background-color: crimson;
+    /* background-color:#F08080; */
     color: white;
     border: none;
     border-radius: 5px;
@@ -84,7 +80,8 @@ button {
   }
   
   button:hover {
-    background-color: rgb(14, 84, 84);
+    background-color:#F08080;
+    /* background-color: rgb(14, 84, 84); */
   }
 
  
@@ -122,16 +119,23 @@ button {
     right: 3px;
     margin: auto;
 }
-#main .bars {
-  background-color: red !important; 
-}
+
   
 .bar {
   width: 27px;
   position: absolute;
   left: 20%;
   bottom: 0;
+  /* background-color: rgb(234, 20, 106); */
+  border-radius: 7px; 
   /* background-color: rgb(234, 20, 106) !important; */
   /* background-color: rgb(0, 183, 255); */
   transition: 0.2s all ease;
+}
+
+/* for barvalue */
+.bar-value {
+  writing-mode: vertical-rl; 
+  transform: rotate(180deg);  
+  /* transform-origin: center; */
 }

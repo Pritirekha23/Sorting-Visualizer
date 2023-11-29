@@ -9,7 +9,7 @@
 </head>
 
 <body>
-   
+
     <nav class="main">
 
         <div class="left-side">
@@ -22,45 +22,45 @@
                 </div>
                 <div>
                     <button class="button1" id="inputBars" onclick="generateBars()">New Array</button>
-                  </div>
+                </div>
                 <div><input type="range" min="20" max="150" step="1" value="80" id="a_sizeofarray"></div>
                 <div class="slidecontainer">
                     <button class="button1">Speed</button>
                     <p>
                         <input type="range" min="20" max="300" value="60" class="slider" id="sortSpeed" />
                     </p>
-                  </div>
-                
+                </div>
+
             </div>
 
-          <div class="algorithms">
-            <div class="dropdown-content">
-                <div class="dropdown-hover">
-                  <button class="button1" id="bubbleSort" onclick="bubble()">Bubble Sort</button>
+            <div class="algorithms">
+                <div>
+                    <div>
+                        <button class="button1" id="insertionSort" onclick="insertion()">Insertion Sort</button>
+                    </div>
+                    <div>
+                        <button class="button1" id="selectionSort" onclick="selection()">Selection Sort</button>
+                    </div>
+                    <div>
+                        <button class="button1" id="bubbleSort" onclick="bubble()">Bubble Sort</button>
+                    </div>
+                    <div>
+                        <button class="button1" id="quickSort" onclick="quickSort()">Quick Sort</button>
+                    </div>
+                    <div>
+                        <button class="button1" id="mergeSort" onclick="mergeSort()">Merge Sort</button>
+                    </div>
                 </div>
-                <div class="dropdown-hover">
-                  <button class="button1" id="selectionSort" onclick="selection()">Selection Sort</button>
-                </div>
-                <div class="dropdown-hover">
-                  <button class="button1" id="insertionSort" onclick="insertion()">Insertion Sort</button>
-                </div>
-                <div class="dropdown-hover">
-                  <button class="button1" id="quickSort" onclick="quickSort()">Quick Sort</button>
-                </div>
-                <div class="dropdown-hover">
-                  <button class="button1" id="mergeSort">Merge Sort</button>
-                </div>
-              </div>
-          </div>
+            </div>
 
         </div>
     </nav>
 
     <!-- class="flex-container" -->
-    
+
     <div id="main" class="box">
-        <div id="bars" >
-            
+        <div id="bars">
+
         </div>
     </div>
 
