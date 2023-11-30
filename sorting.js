@@ -13,7 +13,7 @@ async function insertion() {
     ele[0].style.background = "linear-gradient(316deg, #4062bb 0%, #5200ae 74%)"; //initial color before sorting
     for (let i = 1; i < ele.length; i++) {
       let j = i - 1;
-      let selected = ele[i].style.height; //  x = A[i];
+      let selected = ele[i].style.height; 
       ele[i].style.background =
         "linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%)"; //Changes the background color to visualize the comparison phase 
   
@@ -149,11 +149,6 @@ async function partition(bars, low, high) {
     bars[high].style.background = "linear-gradient(315deg, #00bfb2 0%, #028090 74%)";
     return i + 1;
 }
-
-
-//mergesort
-
-
 
 
 
