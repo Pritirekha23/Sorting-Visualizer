@@ -6,7 +6,7 @@ function swap(el1, el2) {
 }
 
 
-// insertion sort
+// Insertion sort
 async function insertion() {
     const ele = document.querySelectorAll(".bar"); 
     // color
@@ -148,6 +148,74 @@ async function partition(bars, low, high) {
     swap(bars[i + 1], bars[high]);
     bars[high].style.background = "linear-gradient(315deg, #00bfb2 0%, #028090 74%)";
     return i + 1;
+}
+
+//merger sort
+async function mergeSort() {
+  disableSortingBtn();
+  const bars = document.querySelectorAll(".bar");
+  await performMergeSort(bars, 0, bars.length - 1);
+  enableSortingBtn();
+}
+
+async function performMergeSort(bars, low, high) {
+  if (low < high) {
+      const mid = Math.floor((low + high) / 2);
+      await performMergeSort(bars, low, mid);
+      await performMergeSort(bars, mid + 1, high);
+      await merge(bars, low, mid, high);
+  }
+}
+
+async function merge(bars, low, mid, high) {
+  const left = [];
+  const right = [];
+
+  for (let i = low; i <= mid; i++) {
+      left.push(parseInt(bars[i].style.height));
+      bars[i].style.background = "linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)";
+      await insertDelay(delay);
+  }
+
+  for (let i = mid + 1; i <= high; i++) {
+      right.push(parseInt(bars[i].style.height));
+      bars[i].style.background = "linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)";
+      await insertDelay(delay);
+  }
+
+  let i = 0,
+      j = 0,
+      k = low;
+
+  while (i < left.length && j < right.length) {
+      if (left[i] <= right[j]) {
+          bars[k].style.height = `${left[i]}px`;
+          i++;
+      } else {
+          bars[k].style.height = `${right[j]}px`;
+          j++;
+      }
+      k++;
+      await insertDelay(delay);
+  }
+
+  while (i < left.length) {
+      bars[k].style.height = `${left[i]}px`;
+      i++;
+      k++;
+      await insertDelay(delay);
+  }
+
+  while (j < right.length) {
+      bars[k].style.height = `${right[j]}px`;
+      j++;
+      k++;
+      await insertDelay(delay);
+  }
+
+  for (let i = low; i <= high; i++) {
+      bars[i].style.background = "linear-gradient(315deg, #00bfb2 0%, #028090 74%)";
+  }
 }
 
 
