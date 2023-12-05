@@ -137,7 +137,26 @@ button:hover {
 
 /* rightside section end */
 
+.button11 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #07b483;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+ 
+  cursor: pointer;
+}
+.button11 a{
+     text-decoration: none;
+}
+.button11:hover {
+  background-color: #ded417;
+}
 
 
 
 
+/*  Designed by:- Pritirekha Panda */

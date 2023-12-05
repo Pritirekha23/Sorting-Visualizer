@@ -106,49 +106,46 @@ async function selection() {
     swap(ele[min_index], ele[i]);
     // change the min element index back to normal as it is swapped
     ele[min_index].style.background =
-      "linear-gradient(315deg, #00bfb2 0%, #028090 74%)";
-    // change the sorted elements color to green
+    "linear-gradient(315deg, #ff6392 0%, #ff7e5f 74%)"; // Change sorted elements color to pink
     ele[i].style.background =
-      "linear-gradient(316deg, #4062bb 0%, #5200ae 74%)";
+    "linear-gradient(316deg, #ff6392 0%, #ff7e5f 74%)"; 
   }
   enableSortingBtn()
 }
 
 //quicksort
 async function quickSort() {
-    disableSortingBtn();
-    const bars = document.querySelectorAll(".bar");
-    await performQuickSort(bars, 0, bars.length - 1);
-    enableSortingBtn();
+  disableSortingBtn();
+  const bars = document.querySelectorAll(".bar");
+  await performQuickSort(bars, 0, bars.length - 1);
+  enableSortingBtn();
 }
-
 async function performQuickSort(bars, low, high) {
-    if (low < high) {
-        let pivot = await partition(bars, low, high);
-        await performQuickSort(bars, low, pivot - 1);
-        await performQuickSort(bars, pivot + 1, high);
-    }
+  if (low < high) {
+      let pivot = await partition(bars, low, high);
+      await performQuickSort(bars, low, pivot - 1);
+      await performQuickSort(bars, pivot + 1, high);
+  }
 }
-
 async function partition(bars, low, high) {
-    let pivot = parseInt(bars[high].style.height);
-    bars[high].style.background = "linear-gradient(316deg, #f9d29d 0%, #ffd8cb 74%)";
-    let i = low - 1;
+  let pivot = parseInt(bars[high].style.height);
+  bars[high].style.background = "linear-gradient(316deg, #f9d29d 0%, #ffd8cb 74%)";
+  let i = low - 1;
 
-    for (let j = low; j < high; j++) {
-        bars[j].style.background = "linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)";
-        await insertDelay(delay);
-        if (parseInt(bars[j].style.height) < pivot) {
-            i++;
-            swap(bars[i], bars[j]);
-        }
-        bars[j].style.background = "linear-gradient(315deg, #00bfb2 0%, #028090 74%)";
-    }
-
-    swap(bars[i + 1], bars[high]);
-    bars[high].style.background = "linear-gradient(315deg, #00bfb2 0%, #028090 74%)";
-    return i + 1;
+  for (let j = low; j < high; j++) {
+      bars[j].style.background = "linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)";
+      await insertDelay(delay);
+      if (parseInt(bars[j].style.height) < pivot) {
+          i++;
+          swap(bars[i], bars[j]);
+      }
+      bars[j].style.background = "linear-gradient(315deg, #00bfb2 0%, #028090 74%)";
+  }
+  swap(bars[i + 1], bars[high]);
+  bars[high].style.background = "linear-gradient(315deg, #00bfb2 0%, #028090 74%)";
+  return i + 1;
 }
+
 
 //merger sort
 async function mergeSort() {
@@ -238,3 +235,4 @@ function enableSortingBtn(){
 }
 
  
+//  Designed by:- Pritirekha Panda 

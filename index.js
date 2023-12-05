@@ -34,10 +34,10 @@ function clearBox() {
 //speeed
 let delayElement = document.querySelector('#sortSpeed');
 delayElement.addEventListener('input', () => {
-    delay = 360 - parseInt(delayElement.value);               // 360 - 200 min delay
+    delay = 360 - parseInt(delayElement.value);              
 });
 
 
 
 
-
+//  Designed by:- Pritirekha Panda

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explanation</title>
+    <link rel="stylesheet" href="explanation.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">Left Content</div>
+        <div class="middle">
+            <div class="content">
+            <center>All Sortings</center>
+            
+            <h1>Selection Sorting</h1>
+            <p>Selection sort is a simple sorting algorithm that sorts an array by repeatedly finding the minimum element from the unsorted part and putting it at the beginning. </p>
+            <h2 class="ittt">Itteration-1</h2>
+             <h2 class="steps">step-1</h2>
+            <h2> a[30, 50, 20, 10, 40]</h2>
+            <p>First we will select the first a[0] element and comapre with all the other elements . If we found any smaller element than the first element then we will swap it.</p>
+            <p>Comparing a[0] with a[1]</p>
+            <p> 30 < 50 (T)  -->Swapping not required</50></p> <br>
+
+
+            <h2 class="steps">step-2</h2>
+            <h2> a[30, 50, 20, 10, 40]</h2>
+            <p>Comparing a[0] with a[2]</p>
+            <p> 30 < 20 (F)  -->Swapping  required</50></p>
+            <h2>a[20 ,50 , 30, 10, 40]</h2> <br>
+
+            
+
+            <h2 class="steps">step-3</h2>
+            <h2> a[20, 50, 30, 10, 40]</h2>
+            <p>Comparing a[0] that is 20 with a[3] that is 10</p>
+            <p> 20 < 10 (F)  -->Swapping  required</50></p>
+            <h2>a[10 ,50 , 30, 20, 40]</h2> <br>
+
+            <h2 class="steps">step-4</h2>
+            <h2> a[10, 50, 30, 20, 40]</h2>
+            <p>Comparing a[0] that is 10 with a[4] that is 40</p>
+            <p> 10 < 40 (F)  -->Swapping  not required</50></p>
+            <h2>a[10 ,50 , 30, 20, 40]</h2> <br>
+
+
+            <h2 class="ittt">Itteration-2</h2>
+            <h2 class="steps">step-1</h2>
+            <h2> a[10, 50, 30, 20, 40]</h2>
+            <p>Comparing a[1] that is 50 with a[2] that is 30</p>
+            <p> 50 < 30 (F)  -->Swapping   required</50></p>
+            <h2>a[10 ,30 , 50, 20, 40]</h2> <br>
+
+            <h2 class="steps">step-2</h2>
+            <h2> a[10, 30, 50, 20, 40]</h2>
+            <p>Comparing a[1] that is 30 with a[3] that is 20</p>
+            <p> 30 < 20 (F)  -->Swapping   required</50></p>
+            <h2>a[10 ,20 , 50, 30, 40]</h2> <br>
+
+            <h2 class="steps">step-3</h2>
+            <h2> a[10, 20, 50, 30, 40]</h2>
+            <p>Comparing a[1] that is 30 with a[4] that is 40</p>
+            <p> 20 < 40 (T)  -->Swapping not   required</50></p>
+            <h2>a[10 ,20 , 50, 30, 40]</h2> 
+            <p>So 10 and 20 is sorted</p>
+            <br>
+
+            <h2 class="ittt">Itteration-3</h2>
+            <h2 class="steps">step-1</h2>
+            <h2> a[10, 20, 50, 30, 40]</h2>
+            <p>Comparing a[2] that is 50 with a[3] that is 30</p>
+            <p> 50 < 30 (F)  -->Swapping   required</50></p>
+            <h2> a[10, 20, 30, 50, 40]</h2><br>
+
+            <h2 class="steps">step-2</h2>
+            <h2> a[10, 20, 30, 50, 40]</h2>
+            <p>Comparing a[2] that is 30 with a[4] that is 40</p>
+            <p> 30 < 40 (F)  -->Swapping  not  required</50></p>
+            <h2> a[10, 20, 30, 50, 40]</h2> <br>
+
+            <h2 class="ittt">Itteration-4</h2>
+            <h2 class="steps">step-1</h2>
+            <h2> a[10, 20, 30, 50, 40]</h2>
+            <p>Comparing a[3] that is 50 with a[4] that is 40</p>
+            <p> 50 < 40 (F)  -->Swapping   required</50></p>
+            <h2> a[10, 20, 30, 40, 50]</h2><br>
+        </div>
+        </div>
+        <div class="right">Right Content</div>
+    </div>   
+</body>
+</html>
