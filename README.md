@@ -4,5 +4,5 @@
 - The Sorting Visualizer is created using HTML, CSS, JavaScript, and Data Structures and Algorithms, where HTML provides structure, CSS offers styling, JavaScript handles interactive functionality, and DSA contributes the logic for sorting algorithms.
 - Sorting algorithms are step-by-step procedures used to arrange elements in a specific order, typically based on numerical or lexicographic criteria.
 
-Live link of the website:
+## Live link of the website:
 https://pritirekha23.github.io/Sorting-Visualizer/
